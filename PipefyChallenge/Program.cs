@@ -35,9 +35,9 @@ namespace PipefyChallenge
             var segments = GetSegment(value);
 
             // Top
-            PrintLine(segments[1] ? character : ' ', size);
+            PrintLine(segments[0] ? character : ' ', size);
             // Top Columns
-            PrintColumns(segments[0] ? character : ' ', segments[2] ? character : ' ', size);
+            PrintColumns(segments[1] ? character : ' ', segments[2] ? character : ' ', size);
 
             // If there is no Separator, do not print the rest.
             // This guarantees that 1 and 7 won't have repeat columns.
@@ -86,19 +86,19 @@ namespace PipefyChallenge
             switch(value)
             {
                 case 1:
-                    return new bool[] { false, true, false, false, false, false, false };
+                    return new bool[] { true, false, false, false, false, false, false };
                 case 2:
-                    return new bool[] { false, true, true, true, true, false, true };
+                    return new bool[] { true, false, true, true, true, false, true };
                 case 3:
-                    return new bool[] { false, true, true, true, false, true, true };
+                    return new bool[] { true, false, true, true, false, true, true };
                 case 4:
-                    return new bool[] { true, false, true, true, false, true, false };
+                    return new bool[] { false, true, true, true, false, true, false };
                 case 5:
                     return new bool[] { true, true, false, true, false, true, true };
                 case 6:
                     return new bool[] { true, true, false, true, true, true, true };
                 case 7:
-                    return new bool[] { false, true, true, false, false, true, false };
+                    return new bool[] { true, false, true, false, false, true, false };
                 case 8:
                     return new bool[] { true, true, true, true, true, true, true };
                 case 9:
